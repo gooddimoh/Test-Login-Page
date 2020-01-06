@@ -1,0 +1,58 @@
+<?php
+
+?>
+
+<html>
+<head>
+    <title>reCAPTCHA demo: Explicit render for multiple widgets</title>
+    <script type="text/javascript">
+        var verifyCallback = function (response) {
+            alert(response);
+        };
+        var widgetId1;
+        var widgetId2;
+        var onloadCallback = function () {
+            // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
+            // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
+            widgetId1 = grecaptcha.render('example1', {
+                'sitekey': 'your_site_key',
+                'theme': 'light'
+            });
+            widgetId2 = grecaptcha.render(document.getElementById('example2'), {
+                'sitekey': 'your_site_key'
+            });
+            grecaptcha.render('example3', {
+                'sitekey': 'your_site_key',
+                'callback': verifyCallback,
+                'theme': 'dark'
+            });
+        };
+    </script>
+</head>
+<body>
+<form action="">
+    <input type="email">
+    <input type="password">
+    <div class="captcha">
+
+    </div>
+</form>
+<!-- The g-recaptcha-response string displays in an alert message upon submit. -->
+
+<form action="javascript:alert(grecaptcha.getResponse(widgetId1));">
+    <div id="example1">
+        <br>
+    </div>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+
+<br>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+</body>
+</html>
+
+<!--Key-1 6Lcd0ssUAAAAALOCj0DUK6tcRqj1laV6Hy9ZHaCY-->
+<!--Key-2 6Lcd0ssUAAAAAD2FXavbbtvlvT6P-AJjNJEyJNnz-->
