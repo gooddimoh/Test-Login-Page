@@ -1,58 +1,157 @@
-<?php
+<!--
+    i want you to make a web application which will contain the following requirements:
 
-?>
+    1) User registration system -
+    sign up, with require fields , the user didn't follow the rules he can't continue.
+    Verifying email for activate the account.
+    Sign in.
+
+    2) Data collection form -
+    collect the data into a data base to be ready for future uses.
+
+    3) Data visualization -
+    Showing the data on graphs.
+
+    the Ui / UX doesn't important to me, only the functionality is important in that stage .
+    i want you will use any PHP and/or javascript firmware you want, with no plugins.
+
+    you can get 6 days for this mission, in the end upload it to your own host and send me the link
+    -->
+
+<!--Key-1 6Lcd0ssUAAAAALOCj0DUK6tcRqj1laV6Hy9ZHaCY-->
+<!--Key-2 6Lcd0ssUAAAAAD2FXavbbtvlvT6P-AJjNJEyJNnz-->
 
 <html>
 <head>
     <title>reCAPTCHA demo: Explicit render for multiple widgets</title>
     <script type="text/javascript">
+
         var verifyCallback = function (response) {
             alert(response);
         };
         var widgetId1;
         var widgetId2;
         var onloadCallback = function () {
-            // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
-            // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
+
+            // Renders the HTML element with id 'example1' as a reCAPTCHA widget. //
+            // The id of the reCAPTCHA widget is assigned to 'widgetId1'. //
+
             widgetId1 = grecaptcha.render('example1', {
-                'sitekey': 'your_site_key',
+                'sitekey': '6Lcd0ssUAAAAALOCj0DUK6tcRqj1laV6Hy9ZHaCY',
                 'theme': 'light'
             });
             widgetId2 = grecaptcha.render(document.getElementById('example2'), {
-                'sitekey': 'your_site_key'
+                'sitekey': '6Lcd0ssUAAAAALOCj0DUK6tcRqj1laV6Hy9ZHaCY'
             });
             grecaptcha.render('example3', {
-                'sitekey': 'your_site_key',
+                'sitekey': '6Lcd0ssUAAAAALOCj0DUK6tcRqj1laV6Hy9ZHaCY',
                 'callback': verifyCallback,
                 'theme': 'dark'
             });
         };
+
     </script>
 </head>
 <body>
-<form action="">
-    <input type="email">
-    <input type="password">
-    <div class="captcha">
-
+<div class="form-wrapper">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Login Page</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+              integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+              crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+              integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+              crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+    <div class="container">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Sign In</h3>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="username">
+                        </div>
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="password">
+                        </div>
+                        <div class="row align-items-center remember">
+                            <input type="checkbox">
+                            <p>Remember Me</p>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Login" class="btn float-right login_btn">
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center links">
+                        Don't have an account?<a href="#">Sign Up</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a href="#">Forgot your password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</form>
-<!-- The g-recaptcha-response string displays in an alert message upon submit. -->
 
-<form action="javascript:alert(grecaptcha.getResponse(widgetId1));">
-    <div id="example1">
+    </body>
+    </html>
+
+    <form action="javascript:alert(grecaptcha.getResponse(widgetId1));">
+        <div id="example1">
+            <br>
+        </div>
         <br>
-    </div>
-    <br>
-    <input type="submit" value="Submit">
-</form>
+        <input type="submit" value="Submit">
+    </form>
 
+</div>
+<style type="text/css">
+    .card-body {
+        width: 320px;
+    }
+
+    .card {
+        height: 400px;
+        top: 150px;
+    }
+
+    .row.align-items-center.remember input {
+        left: 20px;
+        position: relative;
+    }
+
+    .form-group {
+    }
+
+    input.btn.float-right.login_btn {
+        top: -46px;
+        position: relative;
+    }
+</style>
 <br>
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 </body>
 </html>
-
-<!--Key-1 6Lcd0ssUAAAAALOCj0DUK6tcRqj1laV6Hy9ZHaCY-->
-<!--Key-2 6Lcd0ssUAAAAAD2FXavbbtvlvT6P-AJjNJEyJNnz-->
