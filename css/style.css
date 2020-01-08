@@ -47,7 +47,7 @@ a:hover {
 .tab-group li a {
     display: block;
     text-decoration: none;
-    padding: 15px;
+    padding: 10px;
     background: rgba(160, 179, 176, 0.25);
     color: #a0b3b0;
     font-size: 20px;
@@ -166,11 +166,11 @@ textarea {
     border: 0;
     outline: none;
     border-radius: 0;
-    padding: 15px 0;
-    font-size: 2rem;
+    padding: 5px;
+    font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.4em;
     background: #1ab188;
     color: #ffffff;
     transition: all 0.5s ease;

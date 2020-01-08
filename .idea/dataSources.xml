@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Amazon Redshift - @server.redshift.amazonaws.com" uuid="7407715b-f843-4529-846c-9d75688c2d14">
+      <driver-ref>redshift</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.amazon.redshift.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:redshift://server.redshift.amazonaws.com:5439</jdbc-url>
+    </data-source>
+  </component>
+</project>
