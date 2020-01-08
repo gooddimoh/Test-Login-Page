@@ -5,7 +5,7 @@ CREATE TABLE Users (
     firstname varchar(255),
     password varchar(255),
     created current_timestamp
-    updated current_timestamp
+    update current_timestamp
 );
 -- Create --
 
