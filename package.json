@@ -1,0 +1,22 @@
+{
+  "name": "test-login-page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gooddimoh/Test-Login-Page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gooddimoh/Test-Login-Page/issues"
+  },
+  "homepage": "https://github.com/gooddimoh/Test-Login-Page#readme",
+  "description": "",
+  "dependencies": {
+    "d3": "^5.15.0"
+  }
+}
