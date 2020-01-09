@@ -110,7 +110,8 @@
         $(target).fadeIn(600);
     });
 
-    var obj = $("form").serializeToJSON({});
+    var obj = $(".form").serializeToJSON({});
+    var obj = $(".tab a").serializeToJSON({});
 
     var jsonString = JSON.stringify(obj);
 
