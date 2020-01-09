@@ -1,5 +1,64 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
+}
+html {
+    overflow-y: scroll;
+}
+body {
+    background: #fff;
+    font-family: "Titillium Web", sans-serif;
+    position: relative;
+}
+a {
+    text-decoration: none;
+    color: #1ab188;
+    transition: 0.5s ease;
+}
+a:hover {
+    color: #179b77;
+}
+.form {
+    background: #2F4A6D;
+    padding: 40px;
+    max-width: 600px;
+    margin: 130px auto;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+.tab-group {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+.tab-group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.tab-group li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    background: rgba(160, 179, 176, 0.25);
+    color: #a0b3b0;
+    font-size: 20px;
+    float: left;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.tab-group li a:hover {
+    background: #179b77;
+    color: #ffffff;
+}
+.tab-group .active a {
+    background: #1ab188;
+    color: #ffffff;
+}
+.tab-content > div:last-child {
+    display: none;
 }
 h1 {
     text-align: center;
@@ -27,67 +86,11 @@ h1 {
          }  label.active .req {
                 opacity: 0;
             }
-html {
-    overflow-y: scroll;
-}
-body {
-    background: #fff;
-    font-family: "Titillium Web", sans-serif;
-    position: relative;
-}
-a {
-    text-decoration: none;
-    color: #1ab188;
-    transition: 0.5s ease;
-}
-a:hover {
-    color: #179b77;
-}
-.form {
-    background: #2F4A6D;
-    padding: 40px;
-    max-width: 600px;
-    margin: 130px auto;
-    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
-}
-.tab-group {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 40px 0;
-}
-.tab-group:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-.tab-group li a {
-    display: block;
-    text-decoration: none;
-    padding: 10px;
-    background: rgba(160, 179, 176, 0.25);
-    color: #a0b3b0;
-    font-size: 18px;
-    float: left;
-    width: 50%;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.5s ease;
-}
-.tab-group li a:hover {
-    background: #80cbc4;
-    color: #ffffff;
-}
-.tab-group .active a {
-    background: #80cbc4;
-    color: #ffffff;
-}
-.tab-content > div:last-child {
-    display: none;
-}
 label.highlight {
     color: #ffffff;
 }
-input, textarea {
+input,
+textarea {
     font-size: 22px;
     display: block;
     width: 100%;
@@ -133,18 +136,18 @@ textarea {
     border: 0;
     outline: none;
     border-radius: 0;
-    padding: 10px;
-    font-size: 18px;
-    font-weight: 400;
+    padding: 5px;
+    font-size: 24px;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.4em;
+    background: #1ab188;
     color: #ffffff;
     transition: all 0.5s ease;
     -webkit-appearance: none;
-    background: #80cbc4;
 }
 .button:hover, .button:focus {
-    background: #80cbc4;
+    background: #179b77;
 }
 .button-block {
     display: block;
