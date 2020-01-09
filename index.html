@@ -69,11 +69,12 @@
 <link rel="stylesheet" href="css/style.css">
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+
 <script type="text/javascript">
-    d3.select('div.container  .balance');
-    d3.selectAll('div.container  .balance');
-</script>
-<script type="text/javascript">
+    d3.select('div.container .balance');
+    d3.selectAll('div.container .balance');
     $('.form').find('input, textarea').on('keyup blur focus', function (e) {
         var $this = $(this),
             label = $this.prev('label');
@@ -116,11 +117,11 @@
     alert(jsonString);
 
     $('.button-block .login').click(function () {
-        alert($(this).serializeToString( ));
+        alert($(this).serializeToString());
     });
 
     $('.button-block .sign-up').click(function () {
-        alert($(this).serializeToString( ));
+        alert($(this).serializeToString());
     });
 </script>/
 
