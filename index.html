@@ -113,9 +113,31 @@
     // var obj = $(".form").serializeToJSON({ }); //
     // var obj = $(".tab a").serializeToJSON({ }); //
 
-    $('button.button.button-block.sign-up').click(function () {
-        alert("OK OK OK");
+    $(document).ready(function () {
+        $('button.button.button-block.sign-up').click(function () {
+            $('#loginform').submit(function () {
+
+                $.ajax({
+                    type: "POST",
+                    url: '/class/login.php',
+                    data: {
+                        username: $("#username").val(),
+                        password: $("#password").val()
+                    },
+                    success: function (data) {
+                        if (data === 'Login') {
+                            window.location.replace('/user-page.php');
+                        } else {
+                            alert('Invalid Credentials');
+                        }
+                    }
+                });
+
+            });
+            alert("OK OK OK");
+        });
     });
+
     var jsonString = JSON.stringify(obj);
 
     alert(jsonString);
