@@ -3,27 +3,22 @@
 *:after {
     box-sizing: border-box;
 }
-
 html {
     overflow-y: scroll;
 }
-
 body {
     background: #fff;
     font-family: "Titillium Web", sans-serif;
     position: relative;
 }
-
 a {
     text-decoration: none;
     color: #1ab188;
     transition: 0.5s ease;
 }
-
 a:hover {
     color: #179b77;
 }
-
 .form {
     background: rgba(19, 35, 47, 0.9);
     padding: 40px;
@@ -32,19 +27,16 @@ a:hover {
     border-radius: 4px;
     box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
 }
-
 .tab-group {
     list-style: none;
     padding: 0;
     margin: 0 0 40px 0;
 }
-
 .tab-group:after {
     content: "";
     display: table;
     clear: both;
 }
-
 .tab-group li a {
     display: block;
     text-decoration: none;
@@ -58,29 +50,23 @@ a:hover {
     cursor: pointer;
     transition: 0.5s ease;
 }
-
 .tab-group li a:hover {
     background: #179b77;
     color: #ffffff;
 }
-
 .tab-group .active a {
     background: #1ab188;
     color: #ffffff;
 }
-
 .tab-content > div:last-child {
     display: none;
 }
-
 h1 {
     text-align: center;
     color: #ffffff;
     font-weight: 300;
     margin: 0 0 40px;
-}
-
-label {
+}  label {
     position: absolute;
     -webkit-transform: translateY(6px);
     transform: translateY(6px);
@@ -90,20 +76,15 @@ label {
     -webkit-backface-visibility: hidden;
     pointer-events: none;
     font-size: 22px;
-}
-
-label .req {
+}  label .req {
     margin: 2px;
     color: #1ab188;
-}
-
-label.active {
+}  label.active {
     -webkit-transform: translateY(50px);
     transform: translateY(50px);
     left: 2px;
     font-size: 14px;
-}
-label.active .req {
+}  label.active .req {
     opacity: 0;
 }
 label.highlight {
