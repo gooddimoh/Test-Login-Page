@@ -1,7 +1,6 @@
 *, *:before, *:after {
     box-sizing: border-box;
 }
-
 html {
     overflow-y: scroll;
 }
@@ -41,7 +40,7 @@ a:hover {
     padding: 10px;
     background: rgba(160, 179, 176, 0.25);
     color: #a0b3b0;
-    font-size: 20px;
+    font-size: 18px;
     float: left;
     width: 50%;
     text-align: center;
@@ -49,11 +48,11 @@ a:hover {
     transition: 0.5s ease;
 }
 .tab-group li a:hover {
-    background: #179b77;
+    background: #80cbc4;
     color: #ffffff;
 }
 .tab-group .active a {
-    background: #1ab188;
+    background: #80cbc4;
     color: #ffffff;
 }
 .tab-content > div:last-child {
@@ -135,18 +134,17 @@ textarea {
     border: 0;
     outline: none;
     border-radius: 0;
-    padding: 5px;
-    font-size: 24px;
-    font-weight: 600;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.4em;
-    background: #1ab188;
     color: #ffffff;
     transition: all 0.5s ease;
     -webkit-appearance: none;
 }
 .button:hover, .button:focus {
-    background: #179b77;
+    background: #80cbc4;
 }
 .button-block {
     display: block;
