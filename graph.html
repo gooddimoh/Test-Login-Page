@@ -8,11 +8,13 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 <body>
+
 <div id='layout'>
     <div id='container'>
         <svg viewBox="0 0 750 500"/>
     </div>
 </div>
+
 <style type="text/css">
     body {
         font-family: 'Open Sans', sans-serif;
@@ -90,6 +92,7 @@
     }
 </style>
 <script type="text/javascript">
+
     const sample = [
         {
             language: 'Login',
@@ -102,7 +105,6 @@
             color: '#00a2ee'
         }
     ];
-
     const svg = d3.select('svg');
     const svgContainer = d3.select('#container');
 
@@ -206,7 +208,6 @@
         .attr('y', margin / 2.4)
         .attr('transform', 'rotate(-90)')
         .attr('text-anchor', 'middle')
-        .text('Love meter (%)');
 
     svg.append('text')
         .attr('class', 'title')
