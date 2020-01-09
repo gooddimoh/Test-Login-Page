@@ -1,10 +1,8 @@
 <div class="form">
-
     <ul class="tab-group">
         <li class="tab active"><a href="#signup">Sign Up</a></li>
         <li class="tab"><a href="#login">Log In</a></li>
     </ul>
-
     <div class="tab-content">
         <div id="signup">
             <h1>Sign Up for Free</h1>
@@ -110,15 +108,20 @@
         $(target).fadeIn(600);
     });
 
-    var obj = $(".form").serializeToJSON({});
-    var obj = $(".tab a").serializeToJSON({});
+    var obj = $(".form").serializeToJSON({
+
+    });
+
+    var obj = $(".tab a").serializeToJSON({
+
+    });
 
     var jsonString = JSON.stringify(obj);
 
     alert(jsonString);
 
     $('.login').click(function () {
-        location.href = "http://157.245.128.129/Test-Login-Page/graph.html";
+        location.href = "http://157.245.128.129/Test-Login-Page/index.html";
         alert($(this).serializeToString());
     });
 

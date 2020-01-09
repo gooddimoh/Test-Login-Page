@@ -1,6 +1,32 @@
 *, *:before, *:after {
     box-sizing: border-box;
 }
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-weight: 300;
+    margin: 0 0 40px;
+}  label {
+       position: absolute;
+       -webkit-transform: translateY(6px);
+       transform: translateY(6px);
+       left: 13px;
+       color: rgba(255, 255, 255, 0.5);
+       transition: all 0.25s ease;
+       -webkit-backface-visibility: hidden;
+       pointer-events: none;
+       font-size: 22px;
+   }  label .req {
+          margin: 2px;
+          color: #1ab188;
+      }  label.active {
+             -webkit-transform: translateY(50px);
+             transform: translateY(50px);
+             left: 2px;
+             font-size: 14px;
+         }  label.active .req {
+                opacity: 0;
+            }
 html {
     overflow-y: scroll;
 }
@@ -58,37 +84,10 @@ a:hover {
 .tab-content > div:last-child {
     display: none;
 }
-h1 {
-    text-align: center;
-    color: #ffffff;
-    font-weight: 300;
-    margin: 0 0 40px;
-}  label {
-       position: absolute;
-       -webkit-transform: translateY(6px);
-       transform: translateY(6px);
-       left: 13px;
-       color: rgba(255, 255, 255, 0.5);
-       transition: all 0.25s ease;
-       -webkit-backface-visibility: hidden;
-       pointer-events: none;
-       font-size: 22px;
-   }  label .req {
-          margin: 2px;
-          color: #1ab188;
-      }  label.active {
-             -webkit-transform: translateY(50px);
-             transform: translateY(50px);
-             left: 2px;
-             font-size: 14px;
-         }  label.active .req {
-                opacity: 0;
-            }
 label.highlight {
     color: #ffffff;
 }
-input,
-textarea {
+input, textarea {
     font-size: 22px;
     display: block;
     width: 100%;
@@ -142,6 +141,7 @@ textarea {
     color: #ffffff;
     transition: all 0.5s ease;
     -webkit-appearance: none;
+    background: #80cbc4;
 }
 .button:hover, .button:focus {
     background: #80cbc4;
