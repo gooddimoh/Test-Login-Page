@@ -9,12 +9,10 @@
 </head>
 <body>
 
-<div class="log-out">
-    <button class="log-out">
-        Log-Out
-    </button>
-</div>
 <div id='layout'>
+    <div class="log-out">
+        <button class="log-out"> Log-Out</button>
+    </div>
     <div id='container'>
         <svg viewBox="0 0 750 500"/>
     </div>
@@ -94,6 +92,20 @@
 
     text.source {
         font-size: 10px;
+    }
+
+    .log-out {
+        position: relative;
+        top: 50px;
+        margin: 0 auto;
+        border: none;
+        display: block;
+        width: 100px;
+        height: 40px;
+    }
+
+    .log-out button {
+        background: #80cbc4;
     }
 </style>
 <script type="text/javascript">
