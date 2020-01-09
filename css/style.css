@@ -11,6 +11,7 @@ html {
 body {
     background: #fff;
     font-family: "Titillium Web", sans-serif;
+    position: relative;
 }
 
 a {
@@ -27,7 +28,7 @@ a:hover {
     background: rgba(19, 35, 47, 0.9);
     padding: 40px;
     max-width: 600px;
-    margin: 162px auto;
+    margin: 180px auto;
     border-radius: 4px;
     box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
 }
@@ -166,11 +167,11 @@ textarea {
     border: 0;
     outline: none;
     border-radius: 0;
-    padding: 8px 0;
-    font-size: 2rem;
+    padding: 5px;
+    font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.4em;
     background: #1ab188;
     color: #ffffff;
     transition: all 0.5s ease;
