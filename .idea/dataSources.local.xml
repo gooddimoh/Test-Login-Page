@@ -4,7 +4,6 @@
     <data-source name="Amazon Redshift - @server.redshift.amazonaws.com" uuid="7407715b-f843-4529-846c-9d75688c2d14">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="REDSHIFT" exact-version="0" />
       <secret-storage>master_key</secret-storage>
-      <schema-mapping />
     </data-source>
   </component>
 </project>
