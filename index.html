@@ -122,6 +122,8 @@
     function login() {
         $('form.login').click(function () {
 
+            sessionStorage.setItem(email, "email");
+
             alert($(this));
 
             $.ajax({
@@ -146,6 +148,8 @@
     function signup() {
         $('form.sign-up').click(function () {
 
+            sessionStorage.setItem(email, "email");
+
             alert($(this));
 
             $.ajax({
@@ -157,7 +161,7 @@
 
             request.done(function (msg) {
                 location.href = "http://157.245.128.129/Test-Login-Page/graph.html";
-                console.log("Login Success");
+                console.log("Sign up Success");
                 $("#log").html(msg);
             });
 
@@ -190,15 +194,18 @@
         login(action);
         signup(action);
 
-        graphapi(action);
     }
 
     $(function () {
+
         init('.login');
         init('.sign-up');
-        setTimeout(function () {
-            graphapi();
-        });
+
+        if (typeof sessionStorage.getItem("email") != 'undefined') {
+            setTimeout(function () {
+                graphapi();
+            });
+        }
     });
 
 </script>/
