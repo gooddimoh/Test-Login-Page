@@ -1,6 +1,7 @@
 -- Create --
 CREATE TABLE Users (
     ID int,
+    email varchar(255),
     lastname varchar(255),
     firstname varchar(255),
     password varchar(255),

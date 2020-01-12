@@ -25,3 +25,20 @@ if (strtolower(isset($_GET['action'])) === "signup") {
 echo 'Connected successfully';
 mysqli_close($connection);
 
+
+if (strtolower(isset($_GET['action'])) === "graphapi") {
+
+
+    mysqli_query($connection, "SELECT email FORM `users`", MSSQL_ASSOC);
+
+    header('Cache-Control: no-cache, must-revalidate');
+    header('Content-type: application/json');
+
+    echo json_encode($result_json);
+}
+
+//    lastname varchar(255)
+//    firstname varchar(255),
+//    password varchar(255),
+//    created current_timestamp
+//    update current_timestamp
