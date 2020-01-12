@@ -3,11 +3,13 @@
 $connection = mysqli_connect('localhost', 'mysql_user', 'mysql_password');
 
 if (!$connection) {
-    die('Could not connect: ' . mysqli_error());
+    die('Could not connect: ' . mysqli_error($connection));
 }
 
 if (strtolower(isset($_GET['action'])) === "login") {
-    $res = mysqli_fetch_all(mysqli_query($connection, 'INSERT into `users` (`lastname`,`firstname`) VALUES (`lastname`, `firstname`, `password`, `timestamp`)'));
+    mysqli_fetch_all(mysqli_query($connection, 'INSERT into `users` (`lastname`,`firstname`) VALUES (`lastname`, `firstname`, `password`, `timestamp`)'));
+    $res = mysqli_fetch_all(mysqli_query($connection, 'SELECT into `users` (`lastname`,`firstname`) VALUES (`lastname`, `firstname`, `password`, `timestamp`)'));
+
     in_array($_GET["email"], $res);
     if ($res["email"] == " ") {
         mysqli_query($connection, 'INSERT into `users` VALUES(`lastname`, `firstname`, `password`, `timestamp`)');
@@ -29,16 +31,18 @@ mysqli_close($connection);
 if (strtolower(isset($_GET['action'])) === "graphapi") {
 
 
-    mysqli_query($connection, "SELECT email FORM `users`", MSSQL_ASSOC);
-
+    $res = mysqli_fetch_all(mysqli_query($connection, "SELECT id, email FORM `users`", MYSQLI_ASSOC));
+    var_dump($res);
     header('Cache-Control: no-cache, must-revalidate');
     header('Content-type: application/json');
 
     echo json_encode($result_json);
 }
 
-//    lastname varchar(255)
-//    firstname varchar(255),
-//    password varchar(255),
-//    created current_timestamp
-//    update current_timestamp
+/*
+//    lastname varchar(255)     //
+//    firstname varchar(255)    //
+//    password varchar(255)     //
+//    created current_timestamp //
+//    update current_timestamp  //
+*/

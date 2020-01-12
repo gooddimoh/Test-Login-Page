@@ -119,34 +119,56 @@
         });
     });
 
-    $('.login').click(function () {
-        location.href = "http://157.245.128.129/Test-Login-Page/index.html";
-        alert($(this).serializeToString());
+    function login() {
+        $('form.login').click(function () {
 
-        $.ajax({
-            url: "index.php",
-            method: "POST",
-            data: {logindata: data, action: 'login'},
-            dataType: "json"
+            alert($(this));
+
+            $.ajax({
+                url: "index.php",
+                method: "POST",
+                data: {logindata: data, action: 'login'},
+                dataType: "json"
+            });
+
+            request.done(function (msg) {
+                console.log("Login Success");
+                location.href = "http://157.245.128.129/Test-Login-Page/graph.html";
+            });
+
+            request.fail(function (jqXHR, textStatus) {
+                alert("Request failed: " + textStatus);
+            });
+
         });
+    }
 
-    });
+    function signup() {
+        $('form.sign-up').click(function () {
 
-    $('.sign-up').click(function () {
-        location.href = "http://157.245.128.129/Test-Login-Page/graph.html";
-        alert($(this).serializeToString());
+            alert($(this));
 
-        $.ajax({
-            url: "index.php",
-            method: "POST",
-            data: {signupdata: data, action: 'signup'},
-            dataType: "json"
+            $.ajax({
+                url: "index.php",
+                method: "POST",
+                data: {signupdata: data, action: 'signup'},
+                dataType: "json"
+            });
+
+            request.done(function (msg) {
+                location.href = "http://157.245.128.129/Test-Login-Page/graph.html";
+                console.log("Login Success");
+                $("#log").html(msg);
+            });
+
+            request.fail(function (jqXHR, textStatus) {
+                alert("Request failed: " + textStatus);
+            });
+
         });
-
-    });
+    }
 
     function graphapi() {
-
         var request = $.ajax({
             url: "index.php",
             method: "POST",
@@ -154,8 +176,8 @@
             dataType: "json"
         });
 
-        request.done(function (msg) {
-            $("#log").html(msg);
+        request.done(function (data) {
+            console.log(data);
         });
 
         request.fail(function (jqXHR, textStatus) {
@@ -163,10 +185,21 @@
         });
     }
 
-    $(function () {
-        graphapi();
-    });
+    function init(action) {
 
+        login(action);
+        signup(action);
+
+        graphapi(action);
+    }
+
+    $(function () {
+        init('.login');
+        init('.sign-up');
+        setTimeout(function () {
+            graphapi();
+        });
+    });
 
 </script>/
 
