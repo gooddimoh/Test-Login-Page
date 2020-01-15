@@ -14,6 +14,6 @@ CREATE TABLE Users (
 INSERT into users VALUES (lastname, firstname, password, timestamp) WHERE login != email
 -- Login --
 
--- Signup --
+-- Sign-up --
 SELECT login, password FROM users WHERE login LIKE login and password LIKE password
--- Signup --
+-- Sign-up --

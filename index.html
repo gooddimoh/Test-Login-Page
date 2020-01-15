@@ -1,8 +1,10 @@
 <div class="form">
+
     <ul class="tab-group">
         <li class="tab active"><a href="#signup">Sign Up</a></li>
         <li class="tab"><a href="#login">Log In</a></li>
     </ul>
+
     <div class="tab-content">
         <div id="signup">
             <h1>Sign Up for Free</h1>
@@ -62,10 +64,10 @@
             </form>
         </div>
     </div>
+
 </div>
 <link rel="stylesheet" href="css/style.css">
-<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.4.11/d3.min.js"></script>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script type="text/javascript">
@@ -99,6 +101,7 @@
         }
 
     });
+
     $('.tab a').on('click', function (e) {
         e.preventDefault();
         $(this).parent().addClass('active');
@@ -108,10 +111,10 @@
         $(target).fadeIn(600);
     });
 
-    // var      obj = $(".form").serializeToJSON({ });    //
-    // var      obj = $(".tab a").serializeToJSON({ });   //
-    // var      jsonString = JSON.stringify(obj);         //
-    //          alert(jsonString);                        //
+    //      var      obj = $(".form").serializeToJSON({ });    //
+    //      var      obj = $(".tab a").serializeToJSON({ });   //
+    //      var      jsonString = JSON.stringify(obj);         //
+    //               alert(jsonString);                        //
 
     $(document).ready(function () {
         $('button.button.button-block.sign-up').click(function () {
